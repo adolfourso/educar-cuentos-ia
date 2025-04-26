@@ -73,10 +73,6 @@ podman-compose up --build -d
 docker compose up --build -d
 ```
 
-Podés crear un `docker-compose.yml` si necesitás que lo armemos.
-
----
-
 ## 🧪 Cómo usar la app
 
 1. Ingresá a `http://localhost:3000`
