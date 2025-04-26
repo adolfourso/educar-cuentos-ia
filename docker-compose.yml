@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: cuentos-backend
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./backend:/app
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: cuentos-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./frontend:/app
+    restart: unless-stopped
+
+  db:
+    image: postgres:15
+    container_name: cuentos-db
+    environment:
+      POSTGRES_DB: cuentos
+      POSTGRES_USER: cuentos_user
+      POSTGRES_PASSWORD: cuentos_pass
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+volumes:
+  postgres_data:

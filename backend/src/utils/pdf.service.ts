@@ -1,14 +1,14 @@
 import { Injectable } from '@nestjs/common';
 import * as fs from 'fs';
-import * as path from 'path';
+import { join } from 'path';
 import * as PDFDocument from 'pdfkit';
 
 @Injectable()
 export class PdfService {
   generatePdf(content: string, fileName: string): Promise<string> {
     return new Promise((resolve, reject) => {
-      const outputDir = path.join(__dirname, '..', '..', 'pdfs');
-      const filePath = path.join(outputDir, fileName);
+      const outputDir = join(__dirname, '..', '..', 'pdfs'); // correcto
+      const filePath = join(outputDir, fileName);
 
       fs.mkdirSync(outputDir, { recursive: true });
 
