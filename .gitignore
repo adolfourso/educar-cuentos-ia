@@ -1,0 +1,29 @@
+<copiá ese contenido arriba>
+cat <<EOF > .gitignore
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Next.js
+.next/
+out/
+
+# Laravel / Nest
+vendor/
+.env
+.env.local
+storage/*.key
+public/storage
+
+# Logs
+*.log
+
+# IDEs
+.vscode/
+.idea/
+
+# PDFs generados
+pdfs/
+EOF

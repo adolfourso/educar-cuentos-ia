@@ -1,0 +1,28 @@
+import { Injectable } from '@nestjs/common';
+import * as fs from 'fs';
+import * as path from 'path';
+import * as PDFDocument from 'pdfkit';
+
+@Injectable()
+export class PdfService {
+  generatePdf(content: string, fileName: string): Promise<string> {
+    return new Promise((resolve, reject) => {
+      const outputDir = path.join(__dirname, '..', '..', 'pdfs');
+      const filePath = path.join(outputDir, fileName);
+
+      fs.mkdirSync(outputDir, { recursive: true });
+
+      const doc = new PDFDocument();
+      const stream = fs.createWriteStream(filePath);
+
+      doc.pipe(stream);
+      doc.fontSize(14).text(content, {
+        align: 'left',
+      });
+      doc.end();
+
+      stream.on('finish', () => resolve(`/pdfs/${fileName}`));
+      stream.on('error', reject);
+    });
+  }
+}
