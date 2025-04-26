@@ -110,4 +110,4 @@ Este proyecto busca potenciar el aprendizaje creativo con IA libre y abierta.
 
 ## 📄 Licencia
 
-MIT © [adolfoinros](https://github.com/adolfourso)
+MIT © [adolfourso](https://github.com/adolfourso)
