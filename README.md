@@ -17,6 +17,19 @@ Permite a docentes, alumnos o invitados generar historias educativas personaliza
 
 ---
 
+## 🤖 Inteligencia Artificial utilizada
+
+El proyecto utiliza modelos de lenguaje (LLMs) para generar los cuentos educativos:
+
+- Por defecto, se conecta con **OpenAI GPT-3.5 o GPT-4** mediante su API.
+- El diseño permite sustituir fácilmente el proveedor por alternativas locales, como:
+  - **Ollama**: para usar modelos como LLaMA 3 o Mistral en tu máquina
+  - **Transformers.js** o **Hugging Face** para servir modelos propios
+
+La IA combina el contenido de dos artículos de educ.ar para crear una narración coherente, personalizada según el rol de usuario.
+
+---
+
 ## 📁 Estructura del proyecto
 
 ```
@@ -72,6 +85,8 @@ podman-compose up --build -d
 ```bash
 docker compose up --build -d
 ```
+
+---
 
 ## 🧪 Cómo usar la app
 
