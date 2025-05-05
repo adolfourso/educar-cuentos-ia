@@ -87,3 +87,15 @@ Este roadmap organiza las funcionalidades a implementar y mejoras sugeridas para
 - [ ] Integración con IA generativa para ilustraciones (via DALL·E o Stable Diffusion)
 - [ ] Exportación a EPUB
 - [ ] Accesibilidad: lectura con voz (TTS)
+
+## 🔧 Etapa 5 - Mejora de arquitectura y calidad del código
+
+- [ ] Modularizar backend NestJS (`StoriesModule`, `PdfModule`, `UsersModule`, etc.)
+- [ ] Implementar validaciones con DTOs y `class-validator`
+- [ ] Agregar manejo de errores con `HttpExceptionFilter`
+- [ ] Separar proveedor de IA en un servicio (`IAService`) con patrón estrategia
+- [ ] Logging estructurado con `Winston` o `Pino`
+- [ ] Tests unitarios en backend con `Jest`
+- [ ] Tests end-to-end en frontend con `Playwright` o `Cypress`
+- [ ] Documentación automática de la API con `Swagger`
+- [ ] Agregar `CONTRIBUTING.md` para colaboración abierta
