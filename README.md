@@ -122,3 +122,6 @@ Este proyecto busca potenciar el aprendizaje creativo con IA libre y abierta.
 ## 📄 Licencia
 
 MIT © [adolfourso](https://github.com/adolfourso)
+
+en consola
+curl -X POST http://localhost:3000/stories/generate   -H "Content-Type: application/json"   -d '{"url1":"https://www.educ.ar/recursos/152773/20-de-junio-y-genero-enhebrar-la-patria", "url2":"https://www.educ.ar/recursos/115888/la-biblioteca-nacional-fue-bautizada-como-doctor-mariano-mor~"}'
